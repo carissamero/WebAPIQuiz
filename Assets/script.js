@@ -7,7 +7,7 @@ var questions = [{
     choices: ["Vacation", "Swimming", "Hibernate", "Cuddle"],
     correctAnswer: 3
 }, {
-    question: "3. When di Tulips usually bloom?",
+    question: "3. When do Tulips usually bloom?",
     choices: ["Summer", "Early Winter", "Late Winter", "They don't"],
     correctAnswer: 3
 }, {
@@ -21,9 +21,9 @@ var viewingAns = 0;
 var correctAnswers = 0;
 var quizOver = false;
 var iSelectedAnswer = [];
-	var c=180;
+	var c=60;
 	var t;
-$(document).ready(function () 
+$(document).ready(function() 
 {
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
@@ -31,7 +31,7 @@ $(document).ready(function ()
 	
 	timedCount();
 	
-	$(this).find(".preButton").on("click", function () 
+	$(this).find(".preButton").on("click"), function() 
 	{		
 		
         if (!quizOver) 
@@ -53,7 +53,7 @@ $(document).ready(function ()
 			currentQuestion = 0; viewingAns = 2;
 			viewResults();		
 		}
-    });
+    };
 
     $(this).find(".nextButton").on("click", function () 
 	{
