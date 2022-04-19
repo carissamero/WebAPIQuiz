@@ -23,7 +23,7 @@ var quizOver = false;
 var iSelectedAnswer = [];
 	var c=60;
 	var t;
-$(document).ready(function() 
+    
 {
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
