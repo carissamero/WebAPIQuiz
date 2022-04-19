@@ -23,7 +23,7 @@ var quizOver = false;
 var iSelectedAnswer = [];
 	var c=60;
 	var t;
-    
+
 {
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();
@@ -112,7 +112,7 @@ var iSelectedAnswer = [];
 			hideScore();
 		}
     });
-});
+};
 
 
 
@@ -156,13 +156,13 @@ function timedCount()
 				if (currentQuestion < questions.length) 
 				{
 					displayCurrentQuestion();
-					c=15;
+					c=4;
 				} 
 				else 
 				{
 					displayScore();
 					$('#timer').html('');
-					c=16;
+					c=4;
 					$(document).find(".nextButton").text("Play Again?");
 					quizOver = true;
 					return false;
@@ -181,13 +181,13 @@ function timedCount()
 		t = setTimeout(function()
 		{
 			timedCount()
-		},1000);
+		},60);
 	}
 	
 function displayCurrentQuestion() 
 {
 
-	if(c == 185) { c = 180; timedCount(); }
+	if(c == 60) { c = 60; timedCount(); }
     var question = questions[currentQuestion].question;
     var questionClass = $(document).find(".quizContainer > .question");
     var choiceList = $(document).find(".quizContainer > .choiceList");
@@ -229,7 +229,7 @@ function hideScore()
 function viewResults() 
 {
 
-	if(currentQuestion == 10) { currentQuestion = 0;return false; }
+	if(currentQuestion == 4) { currentQuestion = 0;return false; }
 	if(viewingAns == 1) { return false; }
 
 	hideScore();
@@ -268,5 +268,5 @@ function viewResults()
 	setTimeout(function()
 		{
 			viewResults();
-		},3000);
+		},60);
 }
