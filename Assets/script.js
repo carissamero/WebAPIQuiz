@@ -37,10 +37,10 @@ var myQuestions = [{
         correctAnswer: "c"
     },
     {
-        question: "What is the best site ever created?",
+        question: "What is the best dog ever created?",
         answers: {
-            a: "SitePoint",
-            b: "Simple Steps Code",
+            a: "French Bulldogs",
+            b: "English Bulldogs",
             c: "Trick question; they're both the best"
         },
         correctAnswer: "c"
